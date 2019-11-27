@@ -1,0 +1,37 @@
+
+.hidden {
+    display:none;
+ }
+ .show{
+    display:block;
+    height: 300px;
+    width: 200px;
+	min-height: 10rem;
+	background-color: white;
+	top:6vw;
+	right: 2vw;
+	transition: all 0.3s ease-in-out;
+	background-color: white;
+    overflow : hidden;
+    position: absolute;
+    border: 2px solid black;
+ }
+
+ .product-container {
+     overflow-y: scroll;
+     display: flex;
+     flex-direction: column;
+     justify-content: space-between;
+     height: 85%;
+     width: 85%;
+     padding: 15px;
+     border: none;
+     min-height: auto;
+     top: auto;
+     right: auto;
+ }
+
+ .cart-images{
+    height: 50px;
+    width: 75px;
+     }

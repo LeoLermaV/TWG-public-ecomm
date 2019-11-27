@@ -1,0 +1,50 @@
+.header {
+  height: 70px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 25px;
+  background-color: #e20612;
+}
+@media screen and (max-width: 500px) {
+  .header {
+    height: 40px;
+    margin-bottom: 10px;
+  }
+}
+.header .logo-container {
+  height: 100%;
+  width: 70px;
+  padding: 25px;
+}
+@media screen and (max-width: 500px) {
+  .header .logo-container {
+    padding: 0;
+  }
+}
+@media screen and (max-width: 500px) {
+  .header .logo {
+    height: 40px;
+  }
+}
+.header .options {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+@media screen and (max-width: 500px) {
+  .header .options {
+    width: 80%;
+  }
+}
+.header .options .option {
+  padding: 5px 10px;
+  cursor: pointer;
+}
+@media screen and (max-width: 500px) {
+  .header .options .option {
+    padding: 4px 8px;
+  }
+}

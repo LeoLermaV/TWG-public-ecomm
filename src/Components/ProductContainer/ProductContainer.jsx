@@ -27,7 +27,7 @@ class ProductContainer extends React.Component {
     handleClickPrevious = () => {
         this.setState({
             n2: this.state.n2 - 12,
-            n1 : this.setState.n1 - 12})
+            n1 : this.state.n1 - 12})
     }
 
     //Add to State the name price and img of product in order to show in cart/checkout page

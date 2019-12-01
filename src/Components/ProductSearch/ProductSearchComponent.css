@@ -10,14 +10,20 @@
   border-radius: 0;
   border-bottom: 1px solid yellow;
   border-radius: 4px;
+  height: 10px;
 }
 .search-form {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  padding: 3px;
+  height: 30px;
+}
+.selector {
+  border-radius: 4px;
 }
 .search-button {
-  line-height: 50px;
+  line-height: 10px;
   text-align: center;
   padding: 10px;
   background-color: black;

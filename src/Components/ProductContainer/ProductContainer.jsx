@@ -8,7 +8,7 @@ class ProductContainer extends React.Component {
         this.state = {
             n1 : 0,
             n2 : 12,
-            id: []
+            id: [],
         };
         this.handleClickNext = this.handleClickNext.bind(this);
         this.handleClickPrevious = this.handleClickPrevious.bind(this);
@@ -60,6 +60,9 @@ class ProductContainer extends React.Component {
 
     
     render () {
+       let array1= Database.filter((product)=> {
+            return product.categories
+            .includes(this.props.searchState);})
         
         const { n1, n2 } = this.state;
         let button;
@@ -79,21 +82,30 @@ class ProductContainer extends React.Component {
         return (
         <div>
         <div  className='search-result' >{ 
-        //filter database, slice according to state pagination then map to render
-            Database.filter((product)=> {
-            return product.name
-            .includes(this.props.searchState);})
+        
+            array1.filter((product)=> {
+                return product.name
+                .includes(this.props.brand);})
             .slice(n1,n2)
             .map((listitem, index) => {
                 return (
                     <div  className='search-result' key={index}>
-                        <div name={listitem.name}  price={listitem.price} img={listitem.image_url}  className='product'>
-                           <div  className='product-image'> <img className='product-image' src={listitem.image_url} alt={index}/></div>
-                            <div className='product-name'>{listitem.name}</div>
-                            <div className='product-price'>
-                                <div>${listitem.price}</div>
-                                <div onClick={this.handleClick} name={listitem.name} className='addtocart-button'>Add To Cart</div>
-                            </div>
+                        <div 
+                            name={listitem.name}
+                            price={listitem.price}
+                            img={listitem.image_url}
+                            className='product'>
+                                <div  className='product-image'>
+                                    <img className='product-image'
+                                    src={listitem.image_url}
+                                    alt={index}/></div>
+                                <div className='product-name'>{listitem.name}</div>
+                                <div className='product-price'>
+                                    <div>${listitem.price}</div>
+                                    <div onClick={this.handleClick}
+                                    name={listitem.name}
+                                    className='addtocart-button'>Add To Cart</div>
+                                </div>
                         </div>
                     </div>
                     )})
